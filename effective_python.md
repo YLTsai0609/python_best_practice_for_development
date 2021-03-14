@@ -20,6 +20,12 @@
 
 # Chapter 3 : Classes and Ingeritance
 
+## Item 25 : 使用super來初始化父類別 
+
+1. python使用 method resolution order(MRO)來釐清據鑽石結構的繼承關係順序(使用super，並且可以呼叫`mro`方法)
+
+2. 永遠使用super來初始化父類別，避免不預期的bug
+
 # Chapter 4 : Metaclasses and Attributes
 
 ## Item 29 : 寫Python時避免使用Get和Set，必要時使用@property
@@ -28,6 +34,12 @@
 2. 使用`@property`來定義讀取物件屬性時的特殊行為，以及唯讀
 3. 編寫`@property`時，遵從最小驚喜原則，避免神奇的bug產生
 4. 確認你所編寫的`@property`方法是快速取得屬性，慢的，複雜的工作用一般屬性撰寫
+
+## Item 30 : 考慮使用@property
+
+1. 使用`@property`來增加class的新功能，能夠與原來物件屬性做區別
+2. 在功能/需求未知的情況下可以使用`@property`，並依此設計更好的data model
+3. 當`@property`使用情況過於繁重，應該考慮重構物件
 
 # Chapter 5 : Concurrency and parallelism
 
