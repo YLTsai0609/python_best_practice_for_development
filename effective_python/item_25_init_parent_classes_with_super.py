@@ -97,17 +97,17 @@ foo = ThisWay(5)
 
 print("Should be (5*5)+2 = 27, but we got : ", foo.value)
 
-# Why we get 7 instead of 27?
-# Because the call to the second parent class's constructor, PlusTwo.__init__,
-# cause self.value to be reset back to 5 when MyBaseClass.IIint__ get a second time
+# # Why we get 7 instead of 27?
+# # Because the call to the second parent class's constructor, PlusTwo.__init__,
+# # cause self.value to be reset back to 5 when MyBaseClass.IIint__ get a second time
 
-# Python 2.2 add the super built-in function and defined the
-# method resolution order(MRO)
-# MRO standardize which superclasses are initialized before others
-# (e.g. depth-first, left-to-right)
-# It's also ensure that common superclass in diamond hierarchies are only run onces.
+# # Python 2.2 add the super built-in function and defined the
+# # method resolution order(MRO)
+# # MRO standardize which superclasses are initialized before others
+# # (e.g. depth-first, left-to-right)
+# # It's also ensure that common superclass in diamond hierarchies are only run onces.
 
-# Now, let's try it again but we use super
+# # Now, let's try it again but we use super
 
 
 class TimesFiveCorrect(MyBaseClass):
@@ -130,9 +130,9 @@ class GoodWay(TimesFiveCorrect, PlusTwoCorrect):
 foo = GoodWay(5)
 print("Should be 5*(5+2) = 35, and the value is ", foo.value)
 
-# why the answer is not (5*5)+2 = 27?
-# The ordering matches what the MRO defines for this class
-# The MRO ordering available on a class method called mro
+# # why the answer is not (5*5)+2 = 27?
+# # The ordering matches what the MRO defines for this class
+# # The MRO ordering available on a class method called mro
 
 pprint(GoodWay.mro())
 # [<class '__main__.GoodWay'>,
@@ -141,7 +141,7 @@ pprint(GoodWay.mro())
 #  <class '__main__.MyBaseClass'>, - the top of diamond (5)
 #  <class 'object'>]
 
-# So if we change the ordering, we might get 27 like:
+# # So if we change the ordering, we might get 27 like:
 
 
 class AnotherGoodWay(PlusTwoCorrect, TimesFiveCorrect):
@@ -159,13 +159,13 @@ pprint(AnotherGoodWay.mro())
 #  <class '__main__.MyBaseClass'>, 5
 #  <class 'object'>]
 
-# However, the sytax is too verbose
-# So Python 3 simplify the syntax
+# # However, the sytax is too verbose
+# # So Python 3 simplify the syntax
 
 
-class Explicit(MyBaseClass):
-    def __init__(self, value):
-        super(__class__, self).__init__(value * 2)
+# class Explicit(MyBaseClass):
+#     def __init__(self, value):
+#         super(__class__, self).__init__(value * 2)
 
 
 class Implicit(MyBaseClass):
@@ -173,10 +173,10 @@ class Implicit(MyBaseClass):
         super().__init__(value * 2)
 
 
-assert Explicit(10).value == Implicit(10).value
+# assert Explicit(10).value == Implicit(10).value
 
-# Things to remember
+# # Things to remember
 
-# 1. Python standard method resolution order (MRO) solves the problem to
-# super class initilization order and diamond inheritance
-# 2. Always use super bulit-in function to initialize parent classes
+# # 1. Python standard method resolution order (MRO) solves the problem to
+# # super class initilization order and diamond inheritance
+# # 2. Always use super bulit-in function to initialize parent classes

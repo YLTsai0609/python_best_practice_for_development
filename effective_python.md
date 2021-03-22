@@ -20,6 +20,12 @@
 
 # Chapter 3 : Classes and Ingeritance
 
+## Item 24 : 使用classmethod 多型機制來建構泛用物件
+
+1. Python對於單個class僅支援單一的建構子(constructor)，也就是`__init__`
+2. 使用`@classmethod`來定義替定性的建構子
+3. 使用polymorphism來建立泛用物件，減少操作class的修修改改
+
 ## Item 25 : 使用super來初始化父類別 
 
 1. python使用 method resolution order(MRO)來釐清據鑽石結構的繼承關係順序(使用super，並且可以呼叫`mro`方法)
