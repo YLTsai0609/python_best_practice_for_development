@@ -51,6 +51,12 @@
 
 # Chapter 6 : Built-in Modules
 
+## Item 42 : 使用wrap確保你的裝飾器運作正確
+
+1. 裝飾器是一種Python語法，允許一個函數在執行時(runtime)，修改另一個函數
+2. 使用裝飾器時容易造成神奇的bug，起因多因為被裝飾器包裹的函數已經不再是原來的函數，相關函數簽名已經被更換
+3. 使用`wrap`這著裝飾器來撰寫你的裝飾器，會把原先函式的相關簽名全部註冊到外層函數，進而避免掉神奇的bug
+
 # Chapter 7 : Collaboration
 
 # Chapter 8 : Production
