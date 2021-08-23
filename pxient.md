@@ -9,3 +9,12 @@
 5. `forzen=True` --> immutable instance
 6. `kw_only` --> accept keyword argument only
 7. `slots` --> use slots in stead of `__dict__`
+
+### Additional discussion
+
+1. `attrs`, `dataclass` - 都是為了讓開發者可以用更少的程式碼、達成更好的可讀性及維護性的工具
+2. `dataclass` 在 python 3.7 被納入官方套件中，PEP 557 中，對於 `dataclass` 的使用方式有非常詳細的解說，但兩派都有擁護者
+3. 相關討論 
+   1. [attrs 和 Python3.7 的 dataclasses](https://zhuanlan.zhihu.com/p/34963159)
+   2. [Python3.7 特色(1)-dataclasses](https://www.smalldragon.tw/python37-1-dataclasses/)
+   3. [Python 工匠：做一个精通规则的玩家](https://github.com/YLTsai0609/one-python-craftsman/blob/master/zh_CN/10-a-good-player-know-the-rules.md)
