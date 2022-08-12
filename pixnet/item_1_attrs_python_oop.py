@@ -14,7 +14,7 @@ slots=True - use __slot__ for attributes(it's will be faster when you are creati
 
 """
 import os
-
+from typing import List
 import attr
 
 
