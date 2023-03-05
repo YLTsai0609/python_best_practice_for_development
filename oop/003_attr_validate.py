@@ -1,3 +1,6 @@
+'''
+https://blog.csdn.net/HHG20171226/article/details/103038077
+'''
 import attr
 from attr import attrib
 
@@ -39,6 +42,9 @@ except Exception as e:
 
 
 def is_valid_gender(isinstance, attribute,given_gender: str):
+    '''
+    first 2 arguments is for self and attr
+    '''
     if given_gender not in ["male", "female"]:
         raise ValueError(f"gender should be [male, female], got {given_gender}")
 

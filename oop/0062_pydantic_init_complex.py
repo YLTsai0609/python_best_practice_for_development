@@ -1,6 +1,7 @@
 """
 pydantic will do data convertion
 https://docs.pydantic.dev/usage/types/
+TODO: how about without images? --. return a list by default?
 """
 import time
 from typing import List

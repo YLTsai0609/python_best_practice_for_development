@@ -2,7 +2,6 @@
 use attr for more eligant and time saving OOP programming
 
 introduction 1 : https://blog.csdn.net/HHG20171226/article/details/103038077
-introduction 2 : https://zhuanlan.zhihu.com/p/66267212
 
 github : https://github.com/python-attrs/attrs
 official document : attrs.org/en/stable/
@@ -16,8 +15,6 @@ kw_only :  set variable of class using keyword only
 slots = True : use __slot__ for attributes(it's will be faster when you are creating short-lifetime object)
 
 """
-import os
-from typing import Optional
 
 import attr
 
@@ -49,6 +46,7 @@ class Color:
 
 # __ge__ greater equal
 # __gt__ geater than
+# basically all the dunder method
 
 
 # 自動處理所有魔術方法
@@ -70,3 +68,6 @@ print(c2 > GreaterColor(255, 254, 0))  # __le__
 print(c2.__class__.__name__, dir(c2))
 print()
 print(c1.__class__.__name__, dir(c1))
+
+
+
