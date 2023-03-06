@@ -18,8 +18,6 @@ slots = True : use __slot__ for attributes(it's will be faster when you are crea
 
 import attr
 
-# attr.s
-
 
 class Color:
     """
@@ -50,11 +48,12 @@ class Color:
 
 
 # 自動處理所有魔術方法
-@attr.s
-class GreaterColor(object):
+@attr.s(auto_attribs=True)
+class GreaterColor:
     r = attr.ib(default=255, type=int)
     g = attr.ib(default=255, type=int)
     b = attr.ib(default=255, type=int)
+
 
 
 c1 = Color(255, 255, 255)
@@ -68,6 +67,7 @@ print(c2 > GreaterColor(255, 254, 0))  # __le__
 print(c2.__class__.__name__, dir(c2))
 print()
 print(c1.__class__.__name__, dir(c1))
+
 
 
 

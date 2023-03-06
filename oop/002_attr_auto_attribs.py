@@ -13,8 +13,6 @@ class GreaterColor(object):
 
 
 # 還要寫 attr.ib 很麻煩
-
-
 @attr.s(auto_attribs=True)
 class EvenGreaterColor:
     r: int = 255
