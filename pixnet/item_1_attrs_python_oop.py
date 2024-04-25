@@ -17,12 +17,9 @@ slots = True : use __slot__ for attributes(it's will be faster when you are crea
 
 """
 import os
-<<<<<<< HEAD
 from typing import List
-=======
 from typing import Optional
 
->>>>>>> d2b61ecee4340269db14f3ec4e098f9a1e38fed7
 import attr
 
 immutable = attr.s(auto_attribs=True, frozen=True, kw_only=True, slots=True)
