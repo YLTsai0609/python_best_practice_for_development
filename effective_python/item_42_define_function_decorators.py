@@ -123,3 +123,8 @@ print(r)
 # # 2. Using decorators can cause strange behavior in tools that do introspection, such as debuggers
 # # 3. Use the wraps decorator from the functools built-in module
 # # when you define your own decorators to avoid any issues.
+
+# timeout, return default recommendation
+# streaming system, send alert
+# Different Roles (decarator as an infrastructure)
+# even logging
